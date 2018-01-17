@@ -3,7 +3,22 @@
         "http://struts.apache.org/dtds/struts-config_1_3.dtd">
 
 <struts-config>
-	<global-forwards>
-		<forward name="search" path="/search.jsp" />
-	</global-forwards>
+	<!-- Form Beans Configuration -->
+	<form-beans>
+        <form-bean name="userForm" type="io.github.bruxo.form.UserForm" />
+    </form-beans>
+ 
+    <action-mappings>
+        <action path="/user" type="io.github.bruxo.action.UserAction" parameter="dispatch" name="userForm">
+            <forward name="search" path="/user/search.jsp" />
+            <forward name="add" path="/user/add.jsp" />
+        </action>
+    </action-mappings>
+    
+    <message-resources parameter="null" />
+
+	<!-- Message Resources Configuration -->
+	<message-resources parameter="MessageResources" />
+
+
 </struts-config>
