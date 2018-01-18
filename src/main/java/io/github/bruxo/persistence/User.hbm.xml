@@ -13,6 +13,6 @@
 		<property name="age" type="java.lang.Integer">
 			<column name="AGE" />
 		</property>
-		<many-to-one name="dept" column="deptId" not-null="true" class="io.github.bruxo.persistence.Dept" />
+		<many-to-one name="dept" column="deptId" not-null="false" class="io.github.bruxo.persistence.Dept" />
 	</class>
 </hibernate-mapping>
