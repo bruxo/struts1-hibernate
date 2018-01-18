@@ -15,8 +15,6 @@
         </action>
     </action-mappings>
     
-    <message-resources parameter="null" />
-
 	<!-- Message Resources Configuration -->
 	<message-resources parameter="MessageResources" />
 

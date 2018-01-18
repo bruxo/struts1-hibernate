@@ -1,12 +1,22 @@
 package io.github.bruxo.persistence;
 
+
 public class User {
 	 
     private int id;
     private String name;
     private Integer age;
+    private Integer dept;
  
-    public User() {
+	public Integer getDept() {
+		return dept;
+	}
+
+	public void setDept(Integer dept) {
+		this.dept = dept;
+	}
+
+	public User() {
     }
  
     public User(int id, String name) {

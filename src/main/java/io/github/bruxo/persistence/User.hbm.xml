@@ -2,16 +2,17 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="io.github.bruxo.persistence.User" table="USER">
-        <id name="id" type="int">
-            <column name="ID" />
-            <generator class="identity" />
-        </id>
-        <property name="name" type="string">
-            <column name="NAME" length="20" not-null="true" />
-        </property>
-        <property name="age" type="java.lang.Integer">
-            <column name="AGE" />
-        </property>
-    </class>
+	<class name="io.github.bruxo.persistence.User" table="USER">
+		<id name="id" type="int">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+		<property name="name" type="string">
+			<column name="NAME" length="20" not-null="true" />
+		</property>
+		<property name="age" type="java.lang.Integer">
+			<column name="AGE" />
+		</property>
+		<many-to-one name="dept" column="deptId" not-null="true" class="io.github.bruxo.persistence.Dept" />
+	</class>
 </hibernate-mapping>

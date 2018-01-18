@@ -31,7 +31,8 @@ public class UserAction extends DispatchAction {
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
         UserForm userForm = (UserForm) form;
-        List users = new UserDAO().getUsers(userForm.getName());
+        //List users = new UserDAO().getUsers(userForm.getName());
+        List users = new UserDAO().getUsersCriteria(userForm.getName());
         request.setAttribute("users", users);
         return mapping.findForward("search");
     }
